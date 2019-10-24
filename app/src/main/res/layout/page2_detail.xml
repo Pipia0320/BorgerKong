@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        tools:context=".Page2DetailActivity">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="195dp"
+            android:layout_height="179dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="133dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/foodImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/foodDes"
+            android:layout_width="340dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="88dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodPrice" />
+
+        <Button
+            android:id="@+id/minusItem"
+            android:layout_width="29dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="32dp"
+            android:text="-"
+            android:background="#FF9633"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foodImage" />
+
+        <Button
+            android:id="@+id/plusItem"
+            android:layout_width="29dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="32dp"
+            android:text="+"
+            android:background="#FF9633"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/quantity"
+            app:layout_constraintTop_toBottomOf="@+id/foodImage" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="15dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toEndOf="@+id/minusItem"
+            app:layout_constraintTop_toBottomOf="@+id/foodImage"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/foodPrice"
+            android:layout_width="120dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/foodImage"
+            app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+        <Button
+            android:id="@+id/addToCart"
+            android:layout_width="56dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="32dp"
+            android:text="Add"
+            android:background="#FF9633"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:onClick="displayToastMsg"
+            app:layout_constraintStart_toEndOf="@+id/plusItem"
+            app:layout_constraintTop_toBottomOf="@+id/foodImage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
